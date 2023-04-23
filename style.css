@@ -1,0 +1,180 @@
+:root {
+    --body-bgc: rgb(214, 59, 7);
+    --wrapper-white: white;
+    --shadow: rgba(0,0,0,0.2);
+    --grey-text: rgba(0,0,0,0.5);
+    --green: green;
+    
+}
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-bgc);
+}
+.wrapper {
+    height: 380px;
+    width: 350px;
+    background: var(--wrapper-white);
+    box-shadow: 5px 5px 15px var(--shadow);
+    padding: 10px;
+    border-radius: 5px;
+    text-align:center;
+}
+/* *** Heaader Section *** */
+.header {
+    height: 40px;
+    width: 95%;
+    margin: 0 auto;
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+.header div{
+    width: 92px;
+    font-size: 0.9em;
+    color: var(--grey-text);
+    /* border: 1px solid red; */
+}
+/* --- Detail Counters --- */
+.header div b {
+    color: var(--body-bgc);
+}
+/* ------ */
+/* ************ */
+.container {
+    height: 245px;
+    width: 95%;
+    /* border: 1px solid blue; */
+    margin: 10px auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    transition: 1s;
+}
+.result-modal {
+    height: 245px;
+    width: 95%;
+    margin: 10px auto;
+    /* background: rgb(212, 220, 98); */
+    background-color: aliceblue;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    box-shadow: 3px 3px 10px var(--shadow);
+}
+.win-msg div{
+    font-size: 1.5em;
+    color: var(--green);
+    font-weight: bold;
+    text-shadow: 3px 3px 10px var(--shadow);
+}
+.lose-msg div{
+    font-size: 1.5em;
+    color: var(--body-bgc);
+    font-weight: bold;
+    text-shadow: 3px 3px 10px var(--shadow);
+}
+.win-msg div:nth-child(1), .lose-msg div:nth-child(1){
+    font-size: 4em;
+}
+.win-msg p, .lose-msg p{
+    margin-top: 5px;
+    padding: 0;
+    color: var(--grey-text);
+}
+
+
+.hide{
+    display: none;
+}
+/* *** Individual Card *** */
+.card {
+    height: 71px;
+    min-width: 70.25px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: var(--shadow);
+    color: var(--grey-text);
+    transition: 0.3s;
+    text-align: center;
+    position: relative;
+    font-size: 2.1em;
+    line-height: 71px;
+}
+.rotate {
+    transform: rotateY(180deg);
+}
+/* --- Front side of Card where Emojis are displayed --- */
+.front {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--wrapper-white);
+    border: 4px solid var(--grey-text);
+    border-radius: inherit;
+    user-select: none;
+    visibility: hidden;
+    line-height: normal;
+    color: black;
+}
+.visible {
+    visibility: visible;
+}
+/* ---> Front side when 2 cards match <--- */
+.success {
+    border: 5px solid var(--green);
+}
+/* --> Front side when 2 cards do not match <--- */
+.reject {
+    border: 5px solid var(--body-bgc);
+}
+/* ----------- */
+/* ************** */
+
+/* *** Refresh Button *** */
+.refresh {
+    position: relative;
+    top: 0;
+    height: 40px;
+    width: 95%;
+    font-size: 0.9em;
+    border: 2px solid var(--body-bgc);
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--body-bgc);
+    background: var(--wrapper-white);
+    user-select: none;
+    box-shadow: 3px 3px 10px var(--shadow);
+    transition: background 0.3s ease, border 0.1s;
+}
+.refresh:hover {
+    border-right: 4px solid var(--shadow);
+    border-bottom: 4px solid var(--shadow);
+    background: var(--body-bgc);
+    color: white;
+}
+/* --- Button click effect using transition --- */
+.refresh:active {
+    border-bottom: 1px solid var(--grey-text);
+    border-right: 1px solid var(--shadow);
+}
+/* ---- */
+/* *************** */
+
+
+

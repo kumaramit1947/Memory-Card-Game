@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <link href="./style.css" type="text/css" rel="stylesheet" />
+    <script src="./script.js" type="text/javascript" rel="javascript" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="details">Time:<b id="time"></b>s</div>
+            <div class="details">Flips:<b id="flips"></b></div>
+            <div class="details">Level:<b id="level"></b></div>
+        </div>
+        <div class="container"></div>
+        <div class="result-modal hide">
+            <div class="win-msg">
+                <div>&#x1F603</div>
+                <div>You Won!</div>
+                <p>Moving to next level...</p>
+            </div>
+            <div class="lose-msg">
+                <div>&#x1F97A</div>
+                <div>You Lose!</div>
+                <p>You can Replay again...</p>
+            </div>
+        </div>
+        <button class="refresh" onclick="setEmojis()">Replay</button>
+    </div>
+</body>
+</html>
